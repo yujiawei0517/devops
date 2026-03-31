@@ -1,0 +1,57 @@
+# This is a basic workflow to help you get started with Actions
+
+name: test0331
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "test1" ]
+
+  workflow_dispatch:
+
+jobs:
+  a1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test_shell
+        run: echo 123
+  a2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test_shell
+        run: echo 123     
+  b1:
+    runs-on: ubuntu-latest
+    needs: [a1,a2]
+    steps:
+      - name: test_shell
+        run: echo 123
+  b2:
+    runs-on: ubuntu-latest
+    needs: [a1,a2]
+    steps:
+      - name: test_shell
+        run: echo 123
+  c1:
+    runs-on: ubuntu-latest
+    needs: [a1,b1]
+    steps:
+      - name: test_shell
+        run: echo 123      
+  d1:
+    runs-on: ubuntu-latest
+    needs: [a1,a2,b1,b2,c1]
+    steps:
+      - name: test_shell
+        run: echo 123     
+  a3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test_shell
+        run: echo 123
+  d3:
+    runs-on: ubuntu-latest
+    needs: [a3]
+    steps:
+      - name: test_shell
+        run: echo 123       
