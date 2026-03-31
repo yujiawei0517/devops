@@ -2,7 +2,7 @@ name: ceshi0331_test
 
 on:
   push:
-    branches: ["test2"]
+    branches: ["test1"]
 
 jobs:
   a1:
