@@ -26,5 +26,7 @@ jobs:
   a1:
     runs-on: ubuntu-latest
     steps:
+      - name: test_shell1
+        run: echo "123"
       - name: test_shell
         run: echo "The tags are ${{ inputs.tags }}"
