@@ -15,6 +15,146 @@ on:
         required: true
         type: string
         default: qwer
+      tags1:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags2:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags3:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      print_tags4:
+        description: 'True to print to STDOUT xxx'
+        required: true
+        type: boolean
+        default: true
+      tags5:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags6:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags7:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags8:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      print_tags9:
+        description: 'True to print to STDOUT xxx'
+        required: true
+        type: boolean
+        default: true
+      tags10:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags11:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags12:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags13:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      print_tags55:
+        description: 'True to print to STDOUT xxx'
+        required: true
+        type: boolean
+        default: true
+      tags14:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags15:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags16:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags17:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      print_tags18:
+        description: 'True to print to STDOUT xxx'
+        required: true
+        type: boolean
+        default: true
+      tags19:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags20:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags21:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags22:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      print_tags23:
+        description: 'True to print to STDOUT xxx'
+        required: true
+        type: boolean
+        default: true
+      tags24:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags25:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags26:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
+      tags27:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+        default: qwer
 
 jobs:
   a1:
