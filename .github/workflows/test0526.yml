@@ -4,7 +4,10 @@ on:
 name: test0516
 
 jobs:
-  test:
-    runs-on: xxx
+  test1:
+    runs-on: ubuntu-latest
     steps:
       - run: echo hello
+      - run: echo hello2
+      - run: echo hello3
+      
