@@ -3,9 +3,6 @@
 name: CI_renamed
 
 on:
-  push:
-    branches: [ main ]
-
   workflow_dispatch:
     inputs:
       print_tags:
