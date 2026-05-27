@@ -5,6 +5,6 @@ name: test0516
 
 jobs:
   test:
-    run-on: ubuntu-latest
+    runs-on: xxx
     steps:
       - run: echo hello
