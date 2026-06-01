@@ -3,11 +3,14 @@ on:
 
 name: test0516
 
+env:
+  test: ''
+  test2: ''
+  test3: qwer
+
 jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo hello
-      - run: echo hello2
-      - run: echo hello3
+      - run: echo '${{ env.test || env.test2 || env.test3 }}'
       
