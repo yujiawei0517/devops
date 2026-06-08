@@ -14,7 +14,9 @@ jobs:
   # 需求 2: 依赖上述调用子 workflow 的 job
   # ---------------------------------------------------
   job-after-child:
-    needs: call-child-workflow # 声明依赖
+    needs: 
+     - call-child-workflow # 声明依赖
+     - job-after-matrix
     runs-on: ubuntu-latest
     steps:
       - run: echo "子 workflow 执行完毕，现在执行我！"
