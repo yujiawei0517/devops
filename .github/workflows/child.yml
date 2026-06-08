@@ -4,8 +4,13 @@ on:
   workflow_call: # 允许被其他 workflow 调用
 
 jobs:
-  child-task:
+  child-task1:
     runs-on: ubuntu-latest
     steps:
       - name: Run child step
-        run: echo "我是子 Workflow，我正在执行！"
+        run: echo "我是子 Workflow child-task1，我正在执行！"
+  child-task2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run child step
+        run: echo "我是子 Workflow child-task2，我正在执行！"
