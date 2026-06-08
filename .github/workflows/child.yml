@@ -1,0 +1,11 @@
+name: Child Workflow
+
+on:
+  workflow_call: # 允许被其他 workflow 调用
+
+jobs:
+  child-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run child step
+        run: echo "我是子 Workflow，我正在执行！"
