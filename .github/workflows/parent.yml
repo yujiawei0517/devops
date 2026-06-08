@@ -1,0 +1,40 @@
+name: Parent Workflow
+
+on:
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+jobs:
+  # ---------------------------------------------------
+  # 需求 1: 调用子 workflow 的 job
+  # ---------------------------------------------------
+  call-child-workflow:
+    uses: ./.github/workflows/child.yml
+
+  # ---------------------------------------------------
+  # 需求 2: 依赖上述调用子 workflow 的 job
+  # ---------------------------------------------------
+  job-after-child:
+    needs: call-child-workflow # 声明依赖
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "子 workflow 执行完毕，现在执行我！"
+
+  # ---------------------------------------------------
+  # 需求 3: 使用 matrix 能力的 job
+  # ---------------------------------------------------
+  matrix-job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version: [A, B] # 极其简单的 matrix 定义，会生成两个并发 Job
+    steps:
+      - run: echo "我正在执行 Matrix 版本：${{ matrix.version }}"
+
+  # ---------------------------------------------------
+  # 需求 4: 依赖上述 matrix job 的 job
+  # ---------------------------------------------------
+  job-after-matrix:
+    needs: matrix-job # 声明依赖，必须等 A 和 B 两个 matrix job 都成功才会执行
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "所有的 Matrix Job 都执行完毕啦！"
