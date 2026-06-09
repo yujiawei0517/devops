@@ -28,7 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        version: [A, B] # 极其简单的 matrix 定义，会生成两个并发 Job
+        version: [A, B]
+        tag: [c, d]
     steps:
       - run: echo "我正在执行 Matrix 版本：${{ matrix.version }}"
 
