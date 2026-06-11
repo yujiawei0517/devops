@@ -3,11 +3,15 @@ name: Parent Workflow
 on:
   workflow_dispatch: # 允许在 Actions 页面手动触发
 
+env:
+  foo: bar
+
 jobs:
   # ---------------------------------------------------
   # 需求 1: 调用子 workflow 的 job
   # ---------------------------------------------------
   call-child-workflow:
+    if: ${{ vars.foo == 'test' }}
     uses: ./.github/workflows/child.yml
 
   # ---------------------------------------------------
