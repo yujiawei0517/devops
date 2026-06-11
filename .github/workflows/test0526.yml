@@ -13,4 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo '${{ env.test || env.test2 || env.test3 }}'
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ env.test || env.test2 || env.test3 }}'      
       
