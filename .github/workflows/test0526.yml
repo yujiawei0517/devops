@@ -18,5 +18,5 @@ jobs:
   test2:
     runs-on: ubuntu-latest
     steps:
-      - run: echo '${{ env.test || env.test2 || env.test3 }}'      
+      - run: echo '${{ github.sha }}'      
       
