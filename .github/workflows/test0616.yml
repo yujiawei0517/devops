@@ -1,0 +1,24 @@
+on:
+  workflow_dispatch: 
+
+name: test0616
+
+jobs:
+  test1:
+    runs-on: windows-latest
+    steps:
+      - run: echo 123
+  test2:
+    runs-on: macos-latest
+    steps:
+      - run: echo 123
+  test3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 123
+  test4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ddd      
+   
+      
