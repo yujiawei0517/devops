@@ -1,11 +1,12 @@
 on:
   issue_comment:
     types: created 
+  workflow_dispatch:   
 
 name: test0625
 
 jobs:
   test1:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - run: echo 123
+      - run: echo 'the repo is ${{ github.repository }}'
