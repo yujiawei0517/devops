@@ -1,10 +1,8 @@
 on:
   workflow_dispatch:
-    inputs:
-      qwer:
-        type: string
-        description: "test test"
-        default: '${{ github.action_repository }}'
+  pull_request:
+    branches:
+      - main
 
 name: test0625
 
