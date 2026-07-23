@@ -1,8 +1,10 @@
 on:
-  pull_request:
-    branches: ['main'] 
-  pull_request_target:
-    branches: ['main']
+  workflow_dispatch:
+    inputs:
+      qwer:
+        type: string
+        description: "test test"
+        default: '${{ github.action_repository }}'
 
 name: test0625
 
@@ -10,4 +12,4 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'the repo is ${{ github.repository }}'
+      - run: echo 'the input is ${{ github.action_repository }}'
