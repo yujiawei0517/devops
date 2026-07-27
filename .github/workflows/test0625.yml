@@ -12,4 +12,4 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'the input is ${{ github.action_repository }}'
+      - run: echo 'the input is ${{ github.event.pull_request.merge_commit_sha }}'
