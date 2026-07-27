@@ -12,4 +12,6 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'the input is ${{ github.event.pull_request.merge_commit_sha }}'
+      - run: echo 'the commit is ${{ github.sha }}'
+      - run: echo 'the ref is ${{ github.ref }}'
+      - uses: actions/checkout@v6.1.0
