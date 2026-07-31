@@ -12,6 +12,4 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'the commit is ${{ github.sha }}'
-      - run: echo 'the ref is ${{ github.ref }}'
-      - uses: actions/checkout@v6.1.0
+      - run: echo 'the os is ${{ runner.os }}'
