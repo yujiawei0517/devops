@@ -12,4 +12,4 @@ jobs:
   test1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'the os is ${{ runner.os }}'
+      - run: echo 'the arch is ${{ runner.arch }}'
