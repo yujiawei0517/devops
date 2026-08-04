@@ -4,15 +4,12 @@ on:
   workflow_dispatch:
 jobs:
   job_a:
-    name: job with continue on error
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
-      - name: fail step
-        run: |
+      - run: |
           exit 1
-      - name: fail step 2
-        run: |
+      - run: |
           exit 1
   job_b:
     name: downstream after continue
