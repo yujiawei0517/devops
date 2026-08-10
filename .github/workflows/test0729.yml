@@ -5,17 +5,7 @@ on:
 jobs:
   job_a:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
-      - run: |
-          exit 1
-      - run: |
-          exit 1
-  job_b:
-    name: downstream after continue
-    runs-on: ubuntu-latest
-    needs: [job_a]
-    steps:
-      - name: success step
-        run: |
-          echo job_b executed
+      - name: pwsh
+        shell: pwsh
+        run: echo 123
