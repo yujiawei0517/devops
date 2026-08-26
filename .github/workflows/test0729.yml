@@ -7,5 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pwsh
-        shell: pwsh
-        run: echo 123
+        run: |
+          echo 123
+          ddd
