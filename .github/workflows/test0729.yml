@@ -2,11 +2,17 @@ name: test0729
 
 on:
   workflow_dispatch:
+
 jobs:
-  job_a:
+  build:
+    name: 构建
     runs-on: ubuntu-latest
     steps:
-      - name: pwsh
-        run: |
-          echo 123
-          ddd
+      - name: step1
+        run: ddd  
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        run: sleep 10m     
